@@ -1,0 +1,899 @@
+html,
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    background: url('../images/wallpaperflare.com_wallpaper.jpg');
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+h1, h2 {
+	font-family: 'Paytone One', sans-serif;    
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	text-shadow: 3px 2px 3px black;
+}
+
+h3, h4, h5 {
+    font-family: 'Josefin Sans';
+	font-weight: 500;
+}
+
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+}
+
+
+a:hover {
+	color: orange;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+  
+.page-sidebar {
+    width:  30%;
+}
+
+.page-section {
+    margin-bottom: 120px;
+}
+
+
+/*---------------SIDEBAR MENU------------------*/
+#menu {
+    position: fixed;
+    z-index: 1;
+    transition: margin-left .5s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 10%;
+    left: 3%;
+    box-shadow: 3px 2px 15px #dad7d7, 0 0 5px rgb(192, 172, 171);
+	background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidebar a, button, .dropdown-btn {
+    padding: 15px 15px 15px 60px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 1px 2px 1px rgb(54, 54, 53);
+    letter-spacing: 1px;
+    display: block;
+    transition: 0.3s;
+    background: none;
+    border: none;
+}
+  
+.sidebar a:hover {
+    color: #f09850;
+}
+
+.sidebar a .dropdown-btn:hover {
+    background-color: #f09850;
+}
+  
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    margin-left: 40px;
+}
+  
+.openbtn {
+    font-size: 26px;
+    text-align: center;
+    color: #e8a654;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 3px 2px 15px #dad7d7, 0 0 5px #c0acab;
+	background: #00000066;
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 15px 5px;
+    border: none;
+}
+  
+.openbtn:hover {
+    background-color: rgba(68, 68, 68, 0.678);
+}
+
+
+/*-------------------------PAGE SECTIONS-----------------------------*/
+
+
+/*-------------------------VIDEO-----------------------------*/
+.container-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40%; /* 8:5 Aspect Ratio */
+    margin: 0 auto;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*------------------------INTRO-----------------------------*/
+.perspective {
+    width: 100%;
+    perspective: 1000px;
+}
+  
+.card {
+    width: 50%;
+    height: 50%;
+    background: none;
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    /*box-shadow: 0 70px 63px -60px #494848;*/
+    transform-style: preserve-3d;
+    transition: 0.09s linear;
+}
+
+.parallax-logo {
+    margin: 0 -280px;
+    filter: contrast(125%);
+    width: 200%;
+    height: 150%;
+}
+
+.intro-section {
+    display: block;
+    margin: 0 auto;
+}
+
+.intro-section h1 {
+	color: orange;
+	text-shadow: 2px 10px 25px rgb(0, 0, 0);
+	font-size: 75px;
+	line-height: 1.1;
+	letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-section h2 {
+    font-size: 45px;
+	letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-section p {
+    color: white;
+    text-shadow: 2px 10px 25px rgb(0, 0, 0);
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+	background: rgba(106, 153, 215, 0.422);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin: 80px 10px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#more {
+    display: none;
+}
+
+.intro-section button {
+    display: block;
+    margin: 15px auto 0 auto;
+    background: #da690d;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px #ffffff6c;
+    transition: all .3s;
+    border: 1px solid #262626;
+    cursor: pointer;
+}
+
+.intro-section button:hover {
+    color: rgb(1, 1, 1);
+}
+
+
+/*-------------- PARALLAX SECTIONS--------------*/
+.parallax-section-1,
+.parallax-section-2,
+.parallax-section-3,
+.parallax-section-4 {  
+    display: block;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;  
+	float: left;
+	width: 100%;
+	height: 80%;
+	margin: 40px auto;
+}
+
+.parallax-section-1 {
+    background-attachment: fixed;
+	background-image: url('../images/cherven\ drakon.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+.parallax-section-2 {
+    background-attachment: fixed;
+	background-image: url('../images/drakonite\ v\ lqvo.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+.parallax-section-3 {
+    background-attachment: fixed;
+	background-image: url('../images/sdvsdvdsv.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+.parallax-section-4 {
+    background-attachment: fixed;
+	background-image: url('../images/anime.png');
+	background-repeat: repeat;
+	background-size: contain;
+}
+
+.overlay {
+	background: rgba(90, 90, 90, 0.499) none repeat scroll 0 0;
+	display: inline;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+.parallax-section-1 h2,
+.parallax-section-2 h2 {
+    color: orange;
+	text-shadow: 2px 10px 25px rgb(0, 0, 0);
+	font-size: 60px;
+	line-height: 1.1;
+	letter-spacing: 1px;
+    text-align: center;
+    padding: 40px;
+}
+
+.parallax-section-3 h2,
+.parallax-section-4 h2 {
+    color: orange;
+	text-shadow: 2px 10px 25px rgb(0, 0, 0);
+	font-size: 50px;
+	letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax-section-3 h3,
+.parallax-section-4 h3 {
+    color: rgb(255, 255, 255);
+	text-shadow: 2px 10px 25px rgb(0, 0, 0);
+	font-size: 22px;
+	line-height: 1.2;
+	letter-spacing: 1px;
+    text-align: center;
+}
+
+.download-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.download-links .left {
+    padding-right: 40px;
+}
+
+.parallax-section-3 a button,
+.parallax-section-4 .download-links a button {
+    cursor: pointer;
+}
+
+.parallax-section-3 button,
+.parallax-section-4 .download-links .left button,
+.parallax-section-4 .download-links .right button {
+    display: block;
+    margin: 0 auto 20px;
+    width: 220px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.parallax-section-3 button {
+    background-image: url('../images/discord-button.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 40px;
+}
+
+.download-links .left button {
+    background-image: url('../images/download\ for\ windows.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.download-links .right button {
+    background-image: url('../images/download\ for\ google\ play.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*------------------------FEATURES---------------------*/
+.features {
+    display: block;
+    margin: 40px auto;
+}
+
+.features h3 {
+    text-align: center;
+    font-size: 22px;
+    
+}
+
+.features p {
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 30px;
+    background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.features img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/*-------------------------SLIDER---------------------*/
+.mySlides {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: 0 auto;
+}
+  
+.dotSlider {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active {
+    background-color: #717171;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+  
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .dotSlider {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+  }
+  
+  .active, .dotSlider:hover {
+    background-color: #717171;
+  }
+
+
+/*-------------------------TESTIMONIAL-----------------------*/
+.test-section {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%
+
+}
+
+.test-section .testimonial {
+    background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);	
+	width: 60%;
+	margin: 40px auto;
+    border: 3px solid rgb(212, 14, 14);
+	border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+}
+
+.test-section img {
+    display: block;
+    width: 30%;
+    float: right;
+    margin: 0;
+}
+
+.test-section h2 {
+    color: orange;
+	text-shadow: 2px 8px 15px rgb(0, 0, 0);
+	font-size: 60px;
+	letter-spacing: 1px;
+    text-align: center;
+    padding: 40px;
+}
+
+.mySecondSlides {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.testi-name {
+	color: white;
+	font-size: 18px;
+    font-weight: 500;
+	letter-spacing: 1px;
+	margin: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.testi-text {
+	color: #ffffff;
+	font-size: 22px;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 25px;
+	margin: 0 auto;
+	position: relative;
+	text-align: justify;
+}
+
+.dot-container {
+    display: none;
+	bottom: 15px;
+	margin: 0 auto;
+}
+
+.dot-container span {
+	background: rgb(160, 35, 35) none repeat scroll 0 0;
+	border-radius: 50%;
+	color: rgb(212, 94, 14);
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	position: relative;
+	width: 20px;
+}
+
+.dot-container span.seconDotSlider:active {
+  	opacity: 1;
+}
+
+
+/* -----------------------PRIVACY POLICY------------------------*/
+.collapsible {
+    display: block;
+    margin: 40px auto 0;
+    font-family: 'Paytone One', sans-serif;    
+    color: orange;
+	text-shadow: 2px 10px 25px rgb(0, 0, 0);
+	font-size: 24px;
+	line-height: 1.1;
+	letter-spacing: 1px;
+    text-align: center;    
+	background: rgba(106, 153, 215, 0.422);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor: pointer;
+    padding: 30px 160px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+}
+
+.active, .collapsible:hover {
+	background: rgba(106, 153, 215, 0.422);
+}
+  
+.content {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+	background: rgba(106, 153, 215, 0.422);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.content h3, h4 {
+    text-align: center;
+}
+
+.content p {
+    text-align: justify;
+}
+
+/* -----------------------FOOTER------------------------*/
+footer {
+    margin: 0 auto;
+    background: rgba(0,0,0,0.4);
+	backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px 0;
+}
+
+footer p, a {
+    text-align: center;
+    margin: 20px 0px;
+    color: #fff;
+    font-size: 16px;
+}
+  
+footer a {
+    font-family: 'Georgia', cursive;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+  
+
+/* ----------------------BACK TO TOP BUTTON------------------------*/
+#myScrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+  
+#myScrollBtn:hover {
+    background-color: orange;
+}
+
+/* ----------------------RESPONSIVE------------------------*/
+@media screen and (max-width: 1365px) {
+
+    .parallax-logo {
+        margin: 0 -240px;
+    }
+
+    .intro-section h1 {
+        font-size: 65px;
+    }
+
+    .intro-section h2 {
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 1075px) {
+    .container {
+        width: auto;
+        margin: 0 40px;
+    }
+
+    .parallax-logo {
+        margin: 0 -150px;
+    }
+
+    .intro-section h1 {
+        font-size: 65px;
+    }
+
+    .intro-section h2 {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .page-section {
+        display: none;
+    }
+
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+    
+    .parallax-section-1,
+    .parallax-section-2,
+    .parallax-section-3,
+    .parallax-section-4 {
+        background-size: contain;
+        background-repeat: repeat-y;
+    }
+
+    .test-section img {
+        width: 50%;
+    }
+
+    .features img {
+        width: 100%;
+    }
+
+    .parallax-section-4 h2 {
+        padding: 0;
+        line-height:50px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .page-section {
+        margin-top: 40px;
+    }
+
+    .container-video {
+        padding-top: 70%;
+    }
+
+    .responsive-iframe {
+        top: 70px;
+        height: 100%;
+    }
+
+    .parallax-logo {
+        margin: 0 -170px;
+    }
+
+    .intro-section h1 {
+        font-size: 45px;
+    }
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 610px) {
+
+    .page-section {
+        display: none;
+    }
+
+    .container {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .parallax-logo {
+        margin: 40px auto 0 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .intro-section h1 {
+        font-size: 24px;
+    }
+
+    .intro-section h2 {
+        font-size: 16px;
+    }
+
+    .intro-section p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .intro-section button {
+        margin: 5px auto 0 auto;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .features h3 {
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .features p {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .features img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .parallax-section-1 h2,
+    .parallax-section-2 h2,
+    .parallax-section-3 h2,
+    .parallax-section-4 h2 {
+        font-size: 30px;
+        padding: 0;
+        line-height: 32px;
+    }
+
+    .parallax-section-3 h3,
+    .parallax-section-4 h3 {
+        font-size: 14px;
+    }
+
+    .parallax-section-3 button {
+        margin-bottom: 16px;
+        width: 160px;
+        height: 50px;
+    }
+
+    .parallax-section-4 .download-links .left button,
+    .parallax-section-4 .download-links .right button {
+        margin: 0 auto;
+        width: 160px;
+        height: 50px;
+    }
+
+    .download-links {
+        margin-bottom: : 0;
+    }
+
+    .download-links .left {
+        padding-right: 5px;
+    }
+
+    .test-section h2 {
+        font-size: 26px;
+        padding: 0;
+    }
+
+    .test-section .testimonial {
+        margin: 8px auto;
+        padding: 16px;
+    }
+
+    .testi-name {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .testi-text {
+        font-size: 14px;
+        line-height: 25px;
+        margin: 0 auto;
+    }
+
+    .test-section img {
+        width: 50%
+    }
+
+    .collapsible {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .collapsible button {
+        font-size: 16px;
+        line-height: 1.1;
+    }
+
+    .content {
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    footer {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    footer a {
+        font-size: 10px;
+    }
+
+    #myScrollBtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+@media screen and (max-height: 450px) {
+
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+
+    .openbtn {
+    padding: 15px 60px;
+    }
+
+}
+      
+      /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .text {font-size: 11px}
+    }
+
+}
